@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Lezione HTML</title>
+    </head>
+
+    <body>
+        <div>
+          <label for="number">
+              <span>Scegliere un numero: </span>
+          </label>
+          <input type="number" id="number" name="number" step="2" min="0" max="100" autofocus>
+        </div>
+
+        <fieldset>
+            <legend>Selezionare una o più opzioni: </legend>
+            <label for="red">
+                <span>Red</span>
+                <input type="checkbox" id="red" name="red" value="red" checked>
+            </label>
+            <label for="blue">
+                <span>Blue</span>
+                <input type="checkbox" id="blue" name="blue" value="blue">
+            </label>
+            <label for="yellow">
+                <span>Yellow</span>
+                <input type="checkbox" id="yellow" name="yellow" value="yellow">
+            </label>
+        </fieldset>
+
+        <div>
+            <label for="date">
+                <span>Inserire la data di nascita: </span>
+            </label>
+            <input type="date" id="date" name="birthday" value="1900-01-01">
+        </div>
+
+        <button type="button" disabled>button</button>
+
+    </body>
+
+</html>    
