@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Registrazione</title>
+	<style>
+		label {
+			display: block
+		}
+	</style>
+</head>
+
+<body>
+	<form name="dati-utenti" action="#" method="get">
+		<h1>Registrazione al piano di abbonamento</h1>
+		<p>I campi contrassegnati da &ast; sono obbligatori</p>
+		<section>
+			<fieldset>
+				<legend>Dati personali</legend>
+				<div>
+					<label for="email">Email <abbr title="richiesto">&ast;</abbr></label>
+					<input id="email" type="email" name="email" placeholder="joe@example.com" required>
+				</div>
+
+				<div>
+					<label for="password">Password <abbr title="richiesto">&ast;</abbr></label>
+					<input id="password" type="password" name="password" minlenght="8" title="your password must be at least 8 characters long" required>
+				</div>
+
+				<div>
+					<label for="name-surname">Nome e Cognome <abbr title="richiesto">&ast;</abbr></label>
+					<input id="name-surname" type="text" name="name-surname" required>
+				</div>
+
+				<div>
+					<label for="birthday">Data di nascita <abbr title="richiesto">&ast;</abbr></label>
+					<input id="birthday" type="date" name="birthday" value="2000-01-01" required>
+				</div>
+
+				<div>
+					<label for="phone">Numero di telefono <abbr title="richiesto">&ast;</abbr></label>
+					<input id="phone" type="tel" name="phone" pattern="[0-9]{10}" required>
+				</div>
+			</fieldset>
+	    </section>
+
+		<section>
+			<fieldset>
+				<legend>Piano di abbonamento</legend>
+				<div>
+					<label for="basic-plans">Selezionare un piano di abbonamento: <abbr title="richiesto">&ast;</abbr></label>
+					<select id="basic-plans" name="plan">
+						<optgroup label="Free">
+							<option value="0" selected>&euro; 0</option>
+						</optgroup>
+
+						<optgroup label="Smart">
+							<option value="5">&euro; 5/mese</option>
+							<option value="20">&euro; 10/mese</option>
+							<option value="20">&euro; 20/mese</option>
+						</optgroup>
+					</select>
+				</div>
+
+				<div>
+					<label for="pro-plan">Aggiungi i vantaggi PRO</label>
+					<input id="pro-plan" type="checkbox" name="pro-plan">
+				</div>
+			</fieldset>
+		</section>
+
+		<section>
+			<fieldset>
+				<legend>Dati carta di credito</legend>
+
+				<div>
+					<label for="cc-number">Numero di carta di credito <abbr title="richiesto">&ast;</abbr></label>
+					<input id="cc-number" type="text" name="cc-number" pattern="[0-9]{14,16}" required>
+				</div>
+
+				
+				<div>
+					<label for="cc-CVC">CVC <abbr title="richiesto">&ast;</abbr></label>
+					<input id="cc-CVC" type="text" name="cc-CVC" pattern="[0-9]{3}" required>
+				</div>
+
+				<div>
+					<label for="cc-expiry">Data di scadenza carta di credito <abbr title="richiesto">&ast;</abbr></label>
+					<input id="cc-expiry" type="date" name="cc-expiry" value="2027-01-01" required>
+				</div>
+
+			</fieldset>
+		</section>	
+		
+		<div>
+			<label for="address">Indirizzo di fatturazione <abbr title="richiesto">&ast;</abbr></label>
+			<textarea id="address" name="address" rows="5" cols="30" required>Inserire qui l'indirizzo di fatturazione...</textarea>
+		</div>
+
+		<button type="submit">Registrami</button>
+
+	</form>
+
+</body>
+
+</html>
